@@ -86,6 +86,7 @@ New-NetFirewallRule -DisplayName "RDP-Restricted" -Direction Inbound -Protocol T
 You will see this after running the last command:    
 <img width="747" height="375" alt="image" src="https://github.com/user-attachments/assets/1723d443-8c58-4ce8-b60d-2366dd18bf2c" />    
 Then run Remove-NetFirewallRule -DisplayName "Remote Desktop*"    
+'''powershell
 You can change the IP address by running this command:    
 New-NetFirewallRule -DisplayName "RDP-Corporate-Network-Only" `    
     -Direction Inbound `    
