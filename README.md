@@ -115,5 +115,5 @@ New-NetFirewallRule -DisplayName "RDP-VPN-Only" `
     -Protocol TCP `
     -LocalPort 3389 `
     -RemoteAddress "172.16.0.0/16" `
-    -Action Allow
-'''
+    -Action Allow '''
+g
