@@ -211,6 +211,28 @@ Then to verify failmode:
 Then to verify autopush:    
 <img width="833" height="168" alt="image" src="https://github.com/user-attachments/assets/2acf6c80-3bb2-4519-948a-30a2dbfa6cb7" />    
 
+Step 5: Comprehensive Logging & Monitoring:    
+First run this command
+<img width="893" height="37" alt="image" src="https://github.com/user-attachments/assets/2de9883d-8040-470b-a5f7-a73735412197" />
+To enable detailed RDP logging.    
+Then run these commands:    
+<img width="897" height="144" alt="image" src="https://github.com/user-attachments/assets/a682d424-83d2-46ba-96ec-d0a59cf9a0ea" />    
+To enable RDP connection logging.    
+Then run the RDP_monitoring script from above and then run the command: wecutil qc to configure WIndows Event forwarding.    
+You will see this and make sure to press y:    
+<img width="845" height="33" alt="image" src="https://github.com/user-attachments/assets/553ff1fc-a3a0-46d7-80de-179057ea6f2f" />    
+Next is scheduled disable for maintenance windows.    
+Run the command:    
+<img width="1215" height="39" alt="image" src="https://github.com/user-attachments/assets/b100e665-ca8d-4d3a-9a9d-7e82e45402b3" />    
+To create a scheduled task to disable RDP after a specific time.    
+Or run it as a script to download from above:    
+<img width="1096" height="140" alt="image" src="https://github.com/user-attachments/assets/7b03b372-407a-4a59-867c-010e18d53523" />
+
+
+
+
+
+
 
 
 
