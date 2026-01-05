@@ -144,6 +144,10 @@ Then run the for loop command:
 <img width="678" height="82" alt="image" src="https://github.com/user-attachments/assets/11d606db-2ca7-44a7-83a2-2c1dec066182" />    
 Then run these commands and it should work:    
 <img width="736" height="63" alt="image" src="https://github.com/user-attachments/assets/3950dc94-e618-4fb7-b647-7eb3d4f46d44" />    
+Then run the commands:    
+<img width="890" height="97" alt="image" src="https://github.com/user-attachments/assets/9d8f6728-b767-45c3-b876-729edfcd9afb" />    
+to enable RDP audit logging.    
+Next is to do RDP Session Restrictions.    
 
 
 
