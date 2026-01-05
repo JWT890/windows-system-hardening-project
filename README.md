@@ -233,6 +233,19 @@ Next create a alert system script to alert for recent RDP login failures. the sc
 Run it in PowerShell admin like so with this command: powershell -ExecutionPolicy Bypass -File "C:\path\to\the\file\alert2.ps1" and hit enter to see this result.    
 <img width="453" height="80" alt="image" src="https://github.com/user-attachments/assets/bdf67dee-6362-463b-bd64-b1682cadb294" />    
 The result is because there haven't been any RDP logins yet.    
+Next create a baseline file to check the current configurations, download file will above to do as baseline2.ps1.    
+Run in the command line or as a file and it will generate a baseline based off what is configured, might be a few bugs too.    
+Result:    
+<img width="1209" height="808" alt="image" src="https://github.com/user-attachments/assets/89653eab-b2b7-4c35-9026-9d354198dfff" />    
+<img width="1198" height="805" alt="image" src="https://github.com/user-attachments/assets/325dc27a-7444-425c-a76e-ab1163664dfa" />
+*Note that RDP is disabled, might be a bug*    
+<img width="1195" height="820" alt="image" src="https://github.com/user-attachments/assets/fee26dd8-ec9c-4e0e-ac86-9213222817c2" />    
+<img width="1192" height="462" alt="image" src="https://github.com/user-attachments/assets/3f94f8d7-ef4b-40a7-8651-8b5a491f1215" />    
+*Successful logins might be a bug too*    
+
+
+
+
 
 
 
