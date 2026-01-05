@@ -88,32 +88,34 @@ You will see this after running the last command:
 Then run Remove-NetFirewallRule -DisplayName "Remote Desktop*"    
 '''powershell
 You can change the IP address by running this command:    
-New-NetFirewallRule -DisplayName "RDP-Corporate-Network-Only" `    
-    -Direction Inbound `    
-    -Protocol TCP `    
-    -LocalPort 3389 `    
-    -RemoteAddress "10.0.0.0/8", "192.168.1.0/24" `    
-    -Action Allow `    
-    -Profile Domain,Private `    
-    -Enabled True    
-Then run:    
-New-NetFirewallRule -DisplayName "RDP-Block-Public" `    
-    -Direction Inbound `    
-    -Protocol TCP `    
-    -LocalPort 3389 `    
-    -Action Block `    
-    -Profile Public `    
-    -Enabled True    
-And see this output:    
-<img width="816" height="363" alt="image" src="https://github.com/user-attachments/assets/b0ea136e-1e29-4841-9789-76d6dd35ddb7" />    
-Then run:    
-New-NetFirewallRule -DisplayName "RDP-VPN-Only" `    
-    -Direction Inbound `    
-    -Protocol TCP `    
-    -LocalPort 3389 `    
-    -RemoteAddress "172.16.0.0/16" `    
-    -Action Allow    
+# Allow RDP only from corporate networks
+```powershell
+# Allow RDP only from corporate networks
+New-NetFirewallRule -DisplayName "RDP-Corporate-Network-Only" `
+    -Direction Inbound `
+    -Protocol TCP `
+    -LocalPort 3389 `
+    -RemoteAddress "10.0.0.0/8", "192.168.1.0/24" `
+    -Action Allow `
+    -Profile Domain,Private `
+    -Enabled True
 
+# Block RDP on Public networks
+New-NetFirewallRule -DisplayName "RDP-Block-Public" `
+    -Direction Inbound `
+    -Protocol TCP `
+    -LocalPort 3389 `
+    -Action Block `
+    -Profile Public `
+    -Enabled True
+
+# Allow RDP only from VPN network
+New-NetFirewallRule -DisplayName "RDP-VPN-Only" `
+    -Direction Inbound `
+    -Protocol TCP `
+    -LocalPort 3389 `
+    -RemoteAddress "172.16.0.0/16" `
+    -Action Allow
 
 
 
