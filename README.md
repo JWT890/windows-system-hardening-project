@@ -117,11 +117,3 @@ New-NetFirewallRule -DisplayName "RDP-VPN-Only" `
     -RemoteAddress "172.16.0.0/16" `
     -Action Allow
 '''
-
-
-
-
-
-
-
-
