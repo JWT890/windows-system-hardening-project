@@ -127,4 +127,27 @@ Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server\W
 Then run the command:    
 <img width="993" height="40" alt="image" src="https://github.com/user-attachments/assets/12eea0da-6b78-4bb6-88d9-058329ac8552" />    
 With the value set to three to make it FIPS compliant.    
+Then run the command:    
+<img width="993" height="36" alt="image" src="https://github.com/user-attachments/assets/d73599e7-4e7f-42f9-98b8-b8c2632bf69b" />    
+To have TSL/SSL enabled.    
+Then run the command:    
+<img width="769" height="37" alt="image" src="https://github.com/user-attachments/assets/75fd7a70-adb6-4d50-92e4-2251aada1b87" />    
+To disable blank RDP passwords.    
+Then run DIsable-LocalUser -Name "Guest" to disable the Guest account.    
+Then run:
+<img width="769" height="93" alt="image" src="https://github.com/user-attachments/assets/71ec08ec-93a6-4760-8984-7346fb8e2f90" />    
+To create the RDP-Admins group. Then run the Add-LocalGroupMember -Group "RDP-Administrators" -Member "YourAdminUser" to add your Admin account.    
+Then run:    
+<img width="879" height="41" alt="image" src="https://github.com/user-attachments/assets/07c1275f-37c7-45c8-9ab2-a62f1f9dc47c" />    
+It might work at first so run the command: $registryPath = 'HKLM:\SOFTWARE\Policies\Microsoft\Windows\EventLog\Security" to create the registry path.    
+Then run the for loop command:    
+<img width="678" height="82" alt="image" src="https://github.com/user-attachments/assets/11d606db-2ca7-44a7-83a2-2c1dec066182" />    
+Then run these commands and it should work:    
+<img width="736" height="63" alt="image" src="https://github.com/user-attachments/assets/3950dc94-e618-4fb7-b647-7eb3d4f46d44" />    
+
+
+
+
+
+
 
