@@ -148,6 +148,34 @@ Then run the commands:
 <img width="890" height="97" alt="image" src="https://github.com/user-attachments/assets/9d8f6728-b767-45c3-b876-729edfcd9afb" />    
 to enable RDP audit logging.    
 Next is to do RDP Session Restrictions.    
+First run the command:    
+<img width="920" height="38" alt="image" src="https://github.com/user-attachments/assets/06e05ab3-6d8c-4fed-9695-620a51d52850" />    
+To enable idle timeout of 15 minutes.    
+Then run the command:    
+<img width="917" height="35" alt="image" src="https://github.com/user-attachments/assets/8ebd2926-54a3-4be9-82f3-01179fee1efc" />
+To set disconnection timeout to 1 minute.    
+Then run the command:    
+<img width="879" height="38" alt="image" src="https://github.com/user-attachments/assets/79d9de3b-c4aa-4127-b1d0-feef511ca927" />    
+Next up for RDP is disabling risk RDP features.    
+Run the command:    
+<img width="923" height="38" alt="image" src="https://github.com/user-attachments/assets/baa6f759-b7bd-4643-b435-5833bf019771" />    
+To disable clipboard redirection.    
+Then run the command:    
+<img width="913" height="33" alt="image" src="https://github.com/user-attachments/assets/da49bb85-d25e-4b0e-8031-d12d2385b01b" />    
+To disable drive redirection to prevent malware spread.    
+Then run the command:    
+<img width="919" height="34" alt="image" src="https://github.com/user-attachments/assets/5152be7a-8554-4640-b62a-adfc9ae782d4" />    
+To disable printer redirection. 
+Next is setting up a monitoring script for RDP connection.    
+Run this in PowerShell:    
+<img width="588" height="191" alt="image" src="https://github.com/user-attachments/assets/c46ac33f-e5b9-43b8-88dc-03e4d6ba3364" />    
+
+
+
+
+
+
+
 
 
 
