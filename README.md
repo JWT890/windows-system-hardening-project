@@ -68,6 +68,55 @@ net accounts
 After running it, go to Local Security Policy -> security settings -> password policy, and verify to confirm:  
 <img width="746" height="246" alt="image" src="https://github.com/user-attachments/assets/5b07a781-93e1-463f-a06e-393ae6610399" />  
 Then move on to do doing audit policies by typing these commands:  
+<img width="778" height="117" alt="image" src="https://github.com/user-attachments/assets/7d2c7f27-f2dd-47a7-8393-30d679174aab" />    
+
+Step 4: RDP Hardening    
+# Enable NLA (Network Level Authentication)    
+Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp' -Name 'UserAuthentication' -Value 1    
+
+# Set strong encryption    
+Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp' -Name 'MinEncryptionLevel' -Value 3    
+
+# Disable RDP if not needed, or restrict access    
+# To disable:    
+Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server' -Name 'fDenyTSConnections' -Value 1    
+
+# Configure Windows Firewall to allow RDP only from specific IPs    
+New-NetFirewallRule -DisplayName "RDP-Restricted" -Direction Inbound -Protocol TCP -LocalPort 3389 -RemoteAddress "192.168.1.0/24" -Action Allow    
+You will see this after running the last command:    
+<img width="747" height="375" alt="image" src="https://github.com/user-attachments/assets/1723d443-8c58-4ce8-b60d-2366dd18bf2c" />    
+Then run Remove-NetFirewallRule -DisplayName "Remote Desktop*"    
+You can change the IP address by running this command:    
+New-NetFirewallRule -DisplayName "RDP-Corporate-Network-Only" `    
+    -Direction Inbound `    
+    -Protocol TCP `    
+    -LocalPort 3389 `    
+    -RemoteAddress "10.0.0.0/8", "192.168.1.0/24" `    
+    -Action Allow `    
+    -Profile Domain,Private `    
+    -Enabled True    
+Then run:    
+New-NetFirewallRule -DisplayName "RDP-Block-Public" `    
+    -Direction Inbound `    
+    -Protocol TCP `    
+    -LocalPort 3389 `    
+    -Action Block `    
+    -Profile Public `    
+    -Enabled True    
+And see this output:    
+<img width="816" height="363" alt="image" src="https://github.com/user-attachments/assets/b0ea136e-1e29-4841-9789-76d6dd35ddb7" />    
+Then run:    
+New-NetFirewallRule -DisplayName "RDP-VPN-Only" `    
+    -Direction Inbound `    
+    -Protocol TCP `    
+    -LocalPort 3389 `    
+    -RemoteAddress "172.16.0.0/16" `    
+    -Action Allow    
+
+
+
+
+
 
 
 
