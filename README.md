@@ -121,3 +121,10 @@ New-NetFirewallRule -DisplayName "RDP-VPN-Only" `
     -RemoteAddress "172.16.0.0/16" `
     -Action Allow
 ```
+Then run the command:    
+Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp' `
+    -Name 'UserAuthentication' -Value 1.    
+Then run the command:    
+<img width="993" height="40" alt="image" src="https://github.com/user-attachments/assets/12eea0da-6b78-4bb6-88d9-058329ac8552" />    
+With the value set to three to make it FIPS compliant.    
+
