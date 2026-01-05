@@ -247,7 +247,7 @@ And see this result:
 <img width="721" height="462" alt="image" src="https://github.com/user-attachments/assets/7e25db13-ee0b-452c-91fa-411baeb76c86" />    
 And go the file to see this:    
 <img width="374" height="223" alt="image" src="https://github.com/user-attachments/assets/ce70339e-f5ad-478e-be43-850b953db0f2" />    
-
+This Windows System Hardening Project is a comprehensive security initiative focused on strengthening a Windows 11 Pro virtual machine against unauthorized access and potential attacks by methodically reducing its attack surface and enforcing secure configurations across key system components. The project includes a series of PowerShell-based hardening steps—such as disabling unneeded services, configuring Windows Defender and stringent password policies, applying security baselines, and implementing robust Remote Desktop Protocol (RDP) hardening measures—to enforce system resilience, secure access, and proactive monitoring. By combining secure configuration, policy enforcement, logging, and alerting scripts, this project exemplifies practical system hardening—an essential cybersecurity practice that minimizes vulnerabilities and enhances the overall defense posture of Windows systems.
 
 
 
