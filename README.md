@@ -228,6 +228,14 @@ To create a scheduled task to disable RDP after a specific time.
 Or run it as a script to download from above:    
 <img width="1096" height="140" alt="image" src="https://github.com/user-attachments/assets/7b03b372-407a-4a59-867c-010e18d53523" />
 
+Step 6: Detection and Response    
+Next create a alert system script to alert for recent RDP login failures. the script to run is alert2.ps1 which can be gotten from above to run.    
+Run it in PowerShell admin like so with this command: powershell -ExecutionPolicy Bypass -File "C:\path\to\the\file\alert2.ps1" and hit enter to see this result.    
+<img width="453" height="80" alt="image" src="https://github.com/user-attachments/assets/bdf67dee-6362-463b-bd64-b1682cadb294" />    
+The result is because there haven't been any RDP logins yet.    
+
+
+
 
 
 
