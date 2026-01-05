@@ -169,6 +169,65 @@ To disable printer redirection.
 Next is setting up a monitoring script for RDP connection.    
 Run this in PowerShell:    
 <img width="588" height="191" alt="image" src="https://github.com/user-attachments/assets/c46ac33f-e5b9-43b8-88dc-03e4d6ba3364" />    
+Then run this command to disable RDP when not needed:    
+<img width="856" height="36" alt="image" src="https://github.com/user-attachments/assets/a78bba89-b73c-4909-9081-f1f761594844" />    
+And run these to stop and disable RDP:    
+<img width="612" height="34" alt="image" src="https://github.com/user-attachments/assets/96061f24-22bd-4802-869a-ff72dad5a47b" />    
+To re-enable:    
+<img width="959" height="64" alt="image" src="https://github.com/user-attachments/assets/df98f71a-8c2c-46bc-bc50-f8da582f48ef" />    
+To change the port run the command:
+$newPort = 33891.    
+Then run:    
+<img width="1021" height="32" alt="image" src="https://github.com/user-attachments/assets/f15f4db2-7474-4d5c-a53d-5afb634f81b5" />    
+Then run the command to update the firewall rule and get this result:    
+<img width="711" height="483" alt="image" src="https://github.com/user-attachments/assets/01fd4af3-e642-4e38-b628-f0f479693372" />    
+Then run the command:    
+<img width="527" height="22" alt="image" src="https://github.com/user-attachments/assets/65c06cb9-5f4d-4d3f-b203-c40552676716" />    
+To restart RDP.    
+Then run the command:    
+<img width="949" height="37" alt="image" src="https://github.com/user-attachments/assets/99865f16-1c16-493b-a7cf-8a1994864fdd" />
+To update Documentation.    
+Next step is to enable the bastion Host by running this command:    
+<img width="786" height="490" alt="image" src="https://github.com/user-attachments/assets/a2f63996-3400-412f-bf44-c6cf70389533" />    
+Then run this command to allow RDP to only internal servers only:    
+<img width="708" height="491" alt="image" src="https://github.com/user-attachments/assets/73d3f4c9-cd87-49b6-aebb-5052d8ab21e1" />    
+Then run this command to accept RDP only from the Bastion IP:    
+<img width="417" height="19" alt="image" src="https://github.com/user-attachments/assets/b6bf1e2f-f208-4dc9-9b06-e8d53bbf9f49" />    
+Then run this commands to set the firewall and remove any other RDP rules:    
+<img width="769" height="547" alt="image" src="https://github.com/user-attachments/assets/848b8ba6-96ef-46d7-8db2-2ce36129f464" />    
+Next is to enable MFA with DUO. Go to https://signup.duo.com/ and enter in you information, then go check your email.    
+After verifying it and setting up with DUO after scanning the QR code, you will see the admin menu:    
+<img width="1886" height="777" alt="image" src="https://github.com/user-attachments/assets/75c4028a-5986-4134-9fbd-622f97cd0202" />    
+Then go to applications and search for Microsoft RDP and click on add and copy down the integration and secret keys and API hostname.    
+Then go to the searchbar and type: https://dl.duosecurity.com/duo-win-login-latest.exe to download the installer.    
+You will be prompted to enter the API hostname and the respective keys.    
+Then check these boxes:    
+<img width="496" height="382" alt="image" src="https://github.com/user-attachments/assets/35d30c83-7234-4b02-a078-66d582ae00f5" />    
+Then click next until you see install and click install, then wait a few minutes and then reboot.    
+Then to verify DUO, run the command:    
+<img width="951" height="378" alt="image" src="https://github.com/user-attachments/assets/c33a53b0-9996-4315-8c63-8053873386ef" />    
+Then to verify failmode:    
+<img width="829" height="160" alt="image" src="https://github.com/user-attachments/assets/4db557a3-71f8-420d-a28d-a599487bc866" />    
+Then to verify autopush:    
+<img width="833" height="168" alt="image" src="https://github.com/user-attachments/assets/2acf6c80-3bb2-4519-948a-30a2dbfa6cb7" />    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
