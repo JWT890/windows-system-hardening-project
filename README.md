@@ -242,6 +242,14 @@ Result:
 <img width="1195" height="820" alt="image" src="https://github.com/user-attachments/assets/fee26dd8-ec9c-4e0e-ac86-9213222817c2" />    
 <img width="1192" height="462" alt="image" src="https://github.com/user-attachments/assets/3f94f8d7-ef4b-40a7-8651-8b5a491f1215" />    
 *Successful logins might be a bug too*    
+Next test it by running the test.ps1 file from above.    
+And see this result:    
+<img width="721" height="462" alt="image" src="https://github.com/user-attachments/assets/7e25db13-ee0b-452c-91fa-411baeb76c86" />    
+And go the file to see this:    
+<img width="374" height="223" alt="image" src="https://github.com/user-attachments/assets/ce70339e-f5ad-478e-be43-850b953db0f2" />    
+
+
+
 
 
 
