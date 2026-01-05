@@ -86,11 +86,9 @@ New-NetFirewallRule -DisplayName "RDP-Restricted" -Direction Inbound -Protocol T
 You will see this after running the last command:    
 <img width="747" height="375" alt="image" src="https://github.com/user-attachments/assets/1723d443-8c58-4ce8-b60d-2366dd18bf2c" />    
 Then run Remove-NetFirewallRule -DisplayName "Remote Desktop*"    
-'''powershell
 You can change the IP address by running this command:    
-# Allow RDP only from corporate networks
+Allow RDP only from corporate networks
 ```powershell
-# Allow RDP only from corporate networks
 New-NetFirewallRule -DisplayName "RDP-Corporate-Network-Only" `
     -Direction Inbound `
     -Protocol TCP `
@@ -99,8 +97,11 @@ New-NetFirewallRule -DisplayName "RDP-Corporate-Network-Only" `
     -Action Allow `
     -Profile Domain,Private `
     -Enabled True
+```
 
-# Block RDP on Public networks
+### 2. Block RDP on Public Networks
+
+```powershell
 New-NetFirewallRule -DisplayName "RDP-Block-Public" `
     -Direction Inbound `
     -Protocol TCP `
@@ -108,12 +109,15 @@ New-NetFirewallRule -DisplayName "RDP-Block-Public" `
     -Action Block `
     -Profile Public `
     -Enabled True
+```
 
-# Allow RDP only from VPN network
+### 3. Allow RDP Only from VPN Network
+
+```powershell
 New-NetFirewallRule -DisplayName "RDP-VPN-Only" `
     -Direction Inbound `
     -Protocol TCP `
     -LocalPort 3389 `
     -RemoteAddress "172.16.0.0/16" `
-    -Action Allow '''
-g
+    -Action Allow
+```
