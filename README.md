@@ -2,7 +2,7 @@
 
 Windows 11 download: https://www.microsoft.com/en-us/software-download/windows11  
 
-In this project, will be going over how to harden a Windows 11 Pro VM to protect from unauthorized attacks with the following steps. Securing RDP is important since it shows security concious thinking when security systems.  
+This project demonstrates the hardening of a Windows 11 Pro system by reducing the attack surface and enforcing secure system configurations through PowerShell automation and Windows security controls. The implementation includes Windows Defender configuration, password policies, service hardening, RDP security, firewall restrictions, audit logging, session controls, and security monitoring. Automated scripts establish security baselines, detect suspicious RDP activity, and support configuration validation, providing hands-on experience with Windows system administration, security hardening, compliance, monitoring, and defensive automation.    
 
 After getting the Windows 11 VM set up, go to the PowerShell Admin command prompt and begin.  
 
